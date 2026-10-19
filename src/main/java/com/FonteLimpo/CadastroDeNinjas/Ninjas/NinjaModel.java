@@ -1,7 +1,10 @@
-package com.FonteLimpo.CadastroDeNinjas;
+package com.FonteLimpo.CadastroDeNinjas.Ninjas;
 
+import com.FonteLimpo.CadastroDeNinjas.Missoes.MissaoModel;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,4 +20,5 @@ public class NinjaModel
     private String nome;
     private String email;
     private int idade;
+    private List<MissaoModel> missoes;
 }
