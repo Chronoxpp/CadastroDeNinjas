@@ -3,6 +3,8 @@ package com.FonteLimpo.CadastroDeNinjas.Missoes;
 import com.FonteLimpo.CadastroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "missao")
 public class MissaoModel
@@ -12,5 +14,7 @@ public class MissaoModel
     private Long id;
     private String nome;
     private String dificuldade;
-    private NinjaModel ninja;
+
+    @OneToMany(mappedBy = "missoes")
+    private List<NinjaModel> ninja;
 }
